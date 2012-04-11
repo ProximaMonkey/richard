@@ -230,3 +230,8 @@ class VideosViewsTest(ViewTestCase):
         url = reverse('haystack-search')
 
         self.assert_HTTP_200(url)
+
+    def test_opensearch_description(self):
+        """Test the opensearch description view."""
+        url = reverse('opensearch')
+        self.assert_HTTP_200(url)
