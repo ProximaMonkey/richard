@@ -53,7 +53,6 @@ class SiteNews(models.Model):
         return '<SiteNews: %s>' % self.title
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
         super(SiteNews, self).save(*args, **kwargs)
 
 
